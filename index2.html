@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Documentation</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Git Documentation</header>
+        <ul>
+          <li><a href="#What_is_Git?" class="nav-link">What is Git?</a></li>
+          <li><a href="#How_to_use_it" class="nav-link">How to use it</a></li>
+          <li><a href="#Installation_Guide" class="nav-link">Installation Guide</a></li>
+          <li><a href="#Key_Concepts" class="nav-link">Key concepts</a></li>
+          <li><a href="#Configuring_the_Git" class="nav-link">Configuring the Git</a></li>
+          <li><a href="#Local_Repositories_on_Git" class="nav-link">Local Repositories on Git</a></li>
+          <li><a href="#Cloning_Repositories" class="nav-link">Cloning Repositories</a></li>
+          <li><a href="#Review_commit_history" class="nav-link">Review commit history</a></li>
+          <li><a href="#Remote_Repository_on_Github" class="nav-link">Remote Repository on Github</a></li>
+          <li><a href="#Push_a_Master_branch_to_Github" class="nav-link">Push a Master Branch to Github</a></li>
+          <li><a href="#Create_a_New_branch" class="nav-link">Create a new branch</a></li>
+          <li><a href="#References" class="nav-link">References</a></li>
+          <li><a href="#Additional_Resources" class="nav-link">Additional Resources</a></li>
+        </ul>
+      </nav>
+    <main id="main-doc">
+      
+      <section class="main-section" id="What_is_Git?">
+          <header>What is Git?</header>
+          <article>
+            <p>Git is a distributed version control system where each user can make changes to an entire repository on their system. It uses command line and with git it’s easy to undo changes back and forth with a precise explanation of the changes that are made. It has the ability of:
+    </p>
+            <ol>
+              <li>Keeping a track of the changes i.e. different versions of the same file.</li>
+              <li>It also keeps a record of all the files present in a project.</li>
+              <li>Comparing and analyzing different codes with a detailed explanation.</li>
+            </ol>
+          </article>
+      </section>
+      
+      <section class="main-section" id="How_to_use_it">
+        <header>How to use it</header>
+          <article>
+          <p>
+            The basic steps to start working in a Git environment is to have a local repository and a remote repository. </p>
+            <ul>
+             <li><strong>Local repository:</strong> A local repository is a path or a directory created by you on a local computer that is working directory. You write your code in this repository which is private to you until you push it to the remote repository.</li> 
+          <li><strong>Remote repository:</strong> Remote repository is a public directory or is a public platform to host your websites such as Github, Bitbucket. Using Git, one could easily push a piece of code or an entire project to a remote directory.</li> 
+    Now your friends can make changes too!
+          
+          </article>
+      </section>
+     
+        <section class="main-section" id="Installation_Guide">
+        <header>Installation Guide</header>
+          <p> 
+            Now it's time for you install it on your system. Please visit this link to install it. <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">Installation Guide</a> 
+          </p>
+      </section>
+      <section class="main-section" id="Key_Concepts">
+        <header>Key Concepts</header>
+        <p>
+          Let’s try to understand some key terminologies over here:</p>
+    <ul>
+      <li><strong>Version Control System: </strong> Different versions of the codes are maintained in this tool. Also, called as source code manager.</li>
+    <li><strong>Commit:</strong> When you make your changes, the changes should be saved in the local repository before it is being sent to staging area/staging Index and later remote repository. This saves your code into Git. If you want to know more about commit, please check this link git commit.</li>
+      <li><strong>Checkout:</strong> When content in the repository has been copied to the working directory.</li>
+      <li><strong>SHA (Secure Hash Algorithm):</strong> A unique ID given to each commit.</li>
+      <li><strong>Branch:</strong> When you diverge from the main line of development and continue to do work without messing with the main development line.</li>
+       
+      </section>
+      
+      <section class="main-section" id="Configuring_the_Git">
+        <header>Configuring the Git
+        </header>
+        <p>Using the <code>cd</code> command, you can go to your working directory and set up the user credentials for your local and remote repository. These credentials are used to push the code into remote repository.</p>
+    <p>Using this command you can enter the user name and user email id.</p>
+       <p> <code>$ git config --global user.name "ABC" </code> <br>
+         <code>$ git config --global user.email "your_email@gmail.com"</code> </p>
+        <p>Using <strong><code>$ git config -l</code></strong>,you can check whether the changes made are reflecting or not.</p>
+      </section>
+      
+       <section class="main-section" id="Local_Repositories_on_Git">
+        <header>Local Repositories on Git</header>
+         <p>Firstly, a repository should exist on a local system. This repository will be used to store the current project, it can later be pushed onto GitHub. We use the command line to explore the repositories. Using the command <code>cd</code>, go to the path and a make a directory using <code>mkdir</code> command.</p>
+           <ul>
+             <li><strong><code>git init:</code></strong> Once after the directory is made, initialised it using git init command. The git init command creates a new git repository and is now the master branch. Repository is version control system and is used to store the source codes and other development items. You can save the code file or any text file to this path by simply copying the folder or by using command line.
+    </li>
+             <li><strong><code>git status:</code></strong> Using git status it is easy to see the changes made in a repository. Let’s say, I added a new file to the branch which is shown by the git using git status command. Any changes made can be seen using this command. This does not mean the changes are made and stored. 
+    </li>
+             <li><strong><code>git add:</code></strong> The changes made should be added before it is being commit. The code or any file is added to the staging area using the git add command. <br> To add multiple files at one go we use the command <code>git add -A</code>. All the modified files present in the local repository is moved to the staging area.</li>
+             <li><strong><code>git commit:</code></strong> It is used to store the file into a repository from the staging area.</li>
+           </ul>
+      </section>
+      
+       <section class="main-section" id="Cloning_Repositories">
+        <header>Cloning Repositories</header>
+         <p>It is possible that you wish to work on an existing repository available on GitHub or any remote environment. This repository can be cloned using git clone command and is stored on local system for further enhancement of the code. The command to clone a repository is: <code>git clone &lt;path of existing repository&gt;</code>.</p> 
+    <p>While cloning a repository, keep in mind that the command line is not pointing to another repository.</p>
+      </section>
+      
+       <section class="main-section" id="Review_commit_history">
+        <header>Review commit history</header>
+         <p>When working on a code, it is possible you want to roll back the changes made or to make any change in the code you want to see the previous changes made. There are commands to see what changes has been made in the past.</p>
+      <ul>
+        <li><strong><code>git log:</code></strong> To view all the commits made on the repository. We use git log command. Adding the SHA key in the command we can see a specific commit followed by the other commits. To only check for the one lines that is the description of the changes, the command git — oneline is used.</li>
+        <li><strong><code>git — stat:</code></strong> This command is used to view the files that were modified and how many lines of code was added or removed.
+    </li>
+        <li><strong><code>git log -p:</code></strong>To view the actual changes made that is the lines added or removed can be displayed using this command. The -p stands for patch.</li>
+         </ul>
+         <p>In all these commands you can pass the SHA key which could be useful in viewing a specific commit.
+    </p>
+      </section>
+      
+       <section class="main-section" id="Remote_Repository_on_Github">
+        <header>Remote Repository on Github</header>
+         <p>The code can be pushed using Git to the GitHub. For this, an account on GitHub should be made. Secondly, a New Repository should be created on GitHub by clicking the “+” and then “ New repository” button.</p>
+         <p>Once you click on the New repository, it will direct you to a page where you give details of the projects you are working on. A name of your repo and a description of it. If you don’t want to share your repo you can just select the private option. You can change it later if you wish to.</p>
+        <p>Once the repository is created, it will send you to the next page where you choose whether to create a new repo and then push the code to remote or to push the code into an existing repository.</p>
+    <p>If you have already created the repo locally you can just simply push the code to GitHub using the SSH.</p>
+      </section>
+      
+      <section class="main-section" id="Push_a_Master_branch_to_Github">
+        <header>Push a Master Branch to Github</header>
+        <p>Since we have already create the repo locally, we push the code directly to GitHub repo. When pushing the changes, you will need the credentials of your GitHub account.</p>
+      </section>
+      
+      <section class="main-section" id="Create_a_New_branch">
+        <header>Create a New branch</header>
+        <p>Instead of making changes directly to the master branch, one should have a habit of making changes in a different branch. Although, you can go back to previous commit if the new changes are not working but in an Organization it leads to loss of business.</p>
+    <p>Instead it is better to work in a new branch, test the changes made and then move it to the production environment.</p>
+    <p>To add a branch with reference to the master use the command <code>git branch &lt;branch-name&gt;</code>. But if the changes are to be made to a commit which isn’t a master right now use <code>git branch &lt;branch-name&gt; SHA</code>. SHA tells you after which commit the new branch should be placed.</p>
+        <p>Using the <code>git checkout &lt;branch-name&gt</code>; command we move the master branch to a new branch called branch-name. Now, you can add and commit the changes of this branch by using similar steps that we did with old master branch. And then Push your branch to the remote repository: <code>git push -u origin &lt;branch-name&gt;</code></p>
+      <p>If successful, merge the code with the old master branch using <code>git merge &lt;branch-name&gt;</code>. But before running the merge command, you need to switch back to the old master branch using <code>git checkout</code> command.
+        It is also possible to rename, delete, compare branches, using git commands:</p>
+        <ul>
+      <li>Rename: <code>git branch -m &lt;branch-name&gt; &lt;new-branch-name&gt;</code></li>
+          <li>Delete: <code>git branch -d &lt;branch-name&gt;</code></li>
+          <li>Compare branches: <code>git diff &lt;branch-name&gt; &lt;master-branch-name&gt;</code></li>
+      </ul>
+      </section>
+      
+      <section class="main-section" id="References">
+          <header>References</header>
+          <p> All the documentation in this page is taken from <a href="https://towardsdatascience.com/git-version-control-system-666a1ffd85d3" target="_blank">Towards Data Science.</a></p>
+      </section>
+        <section class="main-section" id="Additional_Resources">
+          <header>Additional Resources</header>
+          <p>Feel free to check out these resources to get a better understanding of Git.</p>
+          <ul>
+            <li>The Pro Git book, written by Scott Chacon and Ben Straub, is available online for free. <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F" target="_blank">Read chapter one of the Pro Git book here.</a></li>
+            <li>Watch <a href="https://youtu.be/USjZcfj8yxE" target="_blank">this tutorial</a> to learn how to get started on a basic git workflow. </li>
+            <li>Watch <a href="https://youtu.be/xKVlZ3wFVKA" taget="_blank">this brief video</a> to learn the difference between Git and Github- they are not interchangeable!</li>
+            <li>Atlassian has a more in-depth tutorial for using git. Take a look at their <a href="https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet" target="_blank">Git cheatsheet.</a> </li>
+          </ul>
+      </section>
+        
+    </main>
+</body>
+</html>
